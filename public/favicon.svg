@@ -1,0 +1,37 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Shading gradient for the 3D backing rind -->
+    <radialGradient id="rindGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#d5f7a3" />
+      <stop offset="40%" stop-color="#a4db44" />
+      <stop offset="85%" stop-color="#699c15" />
+      <stop offset="100%" stop-color="#41630b" />
+    </radialGradient>
+    <!-- Light sheen gradient for the cut face pulp -->
+    <radialGradient id="pulpGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1b1e22" />
+      <stop offset="85%" stop-color="#121418" />
+      <stop offset="100%" stop-color="#1c2b12" />
+    </radialGradient>
+  </defs>
+  
+  <!-- 1. The 3D back shell/rind of the lemon -->
+  <path d="M 15,35 C 10,65 30,85 50,85 C 70,85 90,65 85,35 C 80,48 20,48 15,35 Z" fill="url(#rindGrad)" />
+  
+  <!-- 2. The tilted, perspective cut face group -->
+  <!-- Translates to (50, 40), rotates -22deg, squashes height by 0.52 to create 3D tilt -->
+  <g transform="translate(50, 40) rotate(-22) scale(1, 0.52) translate(-50, -50)">
+    <!-- Cut face base -->
+    <circle cx="50" cy="50" r="37" fill="url(#pulpGrad)" stroke="#c7f284" stroke-width="4.5"/>
+    <!-- Segment dividers -->
+    <line x1="50" y1="13" x2="50" y2="87" stroke="#c7f284" stroke-width="2.5" opacity="0.95"/>
+    <line x1="13" y1="50" x2="87" y2="50" stroke="#c7f284" stroke-width="2.5" opacity="0.95"/>
+    <line x1="23.8" y1="23.8" x2="76.2" y2="76.2" stroke="#c7f284" stroke-width="2.5" opacity="0.95"/>
+    <line x1="23.8" y1="76.2" x2="76.2" y2="23.8" stroke="#c7f284" stroke-width="2.5" opacity="0.95"/>
+    
+    <!-- Inner dash ring for pulp segment detail -->
+    <circle cx="50" cy="50" r="30" fill="none" stroke="#c7f284" stroke-width="1.5" stroke-dasharray="2 3" opacity="0.8"/>
+    <!-- Core center -->
+    <circle cx="50" cy="50" r="5" fill="#c7f284"/>
+  </g>
+</svg>
