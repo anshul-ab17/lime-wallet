@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Lime Wallet",
+    "slug": "lime-wallet",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#090a0c"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lime.wallet"
+    },
+    "android": {
+      "package": "com.lime.wallet",
+      "backgroundColor": "#090a0c"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
